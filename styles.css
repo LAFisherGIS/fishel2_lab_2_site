@@ -77,12 +77,24 @@ body{
   text-align: center;
 }
 
+.headerbar h3{
+  display: inline-block;
+  color: #F6F6F6;
+  font-size: 1em;
+  padding-right: 2em;
+  text-align: center;
+}
+
 .pagecontent{
   padding-top: 0.5em;
+  text-align: center;
+}
+
+.pagecontent h3{
+  color: var(--textchroma);
 }
 
 h3{
-  text-align: center;
   font-size: 1em;
 }
 
@@ -92,18 +104,6 @@ p{
   font-size: 0.9em
   font-weight: bold;
   text-align: left;
-}
-
-button{
-  background-color: #808080;
-  border: none;
-  color: blue;
-  padding: 0.5em 0.5em;
-  text-align: center;
-  display: inline-block;
-  font-size: 1em;
-  border-radius: 50%;
-  cursor:pointer;
 }
 
 a:link{
