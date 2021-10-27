@@ -37,6 +37,7 @@ function mapping(){
      L.geoJson(data, {
        pointToLayer: function(feature, latlng){
          var marker = L.circle(latlng, {radius: 25, color: 'green'});
+         if (feature.properties.CITY === "TACOMA")
          return marker;
        }
      }).addTo(mymap);
