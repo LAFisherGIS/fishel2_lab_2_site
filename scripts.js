@@ -36,8 +36,6 @@ function mapping(){
        }).addTo(mymap);
   });
 
-
-
   $.getJSON("Data/Contaminated_Sites_(Ecology).geojson",function(data){
      L.geoJson(data, {
        pointToLayer: function(feature, latlng){
