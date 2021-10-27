@@ -22,17 +22,21 @@ function mapping(){
 		}).addTo(mymap);
 
   $.getJSON("Data/Neighborhood_Council_Districts_(Tacoma).geojson",function(data){
-     L.geoJson(data).addTo(mymap);
+     L.geoJson(data, {
+       style: {color:'grey'}
+       }).addTo(mymap);
   });
 
   $.getJSON("Data/School_Grounds.geojson",function(data){
-     L.geoJson(data).addTo(mymap);
+     L.geoJson(data, {
+       style: {color:'black'}
+       }).addTo(mymap);
   });
 
   $.getJSON("Data/Schools.geojson",function(data){
      L.geoJson(data, {
        pointToLayer: function(feature, latlng){
-         var marker = L.circleMarker(latlng, {radius: radiusSize, color: 'red'});
+         var marker = L.circle(latlng, {radius: 25, color: 'green'});
          return marker;
        }
      }).addTo(mymap);
