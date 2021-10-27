@@ -29,7 +29,10 @@ function mapping(){
 
   $.getJSON("Data/School_Grounds.geojson",function(data){
      L.geoJson(data, {
-       style: {color:'black'}
+       style: function(feature){
+         if (feature.properties.CITY === "TACOMA") return {opacity:1, color:'black'}
+         else return {opacity:0}
+       }
        }).addTo(mymap);
   });
 
@@ -43,7 +46,12 @@ function mapping(){
      }).addTo(mymap);
   });
 
-  $.getJSON("Data/tri_2020_pierce.geojson",function(data){
-     L.geoJson(data).addTo(mymap);
+  $.getJSON("Data/TRI_2018_Pierce_fixed.geojson",function(data){
+     L.geoJson(data, {
+       pointToLayer: function(feature, latlng){
+         var marker = L.circle(latlng, {radius: 100, color: 'red'});
+         return marker;
+       }
+     }).addTo(mymap);
   });
 }
