@@ -46,7 +46,7 @@ function mapping(){
      }).addTo(mymap);
   });
 
-  $.getJSON("Data/TRI_2018_Pierce_fixed.geojson",function(data){
+  $.getJSON("Data/",function(data){
      L.geoJson(data, {
        pointToLayer: function(feature, latlng){
          var marker = L.circle(latlng, {radius: 100, color: 'red'});
