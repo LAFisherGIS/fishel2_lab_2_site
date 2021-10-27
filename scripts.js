@@ -30,7 +30,12 @@ function mapping(){
   });
 
   $.getJSON("Data/Schools.geojson",function(data){
-     L.geoJson(data).addTo(mymap);
+     L.geoJson(data, {
+       pointToLayer: function(feature, latlng){
+         var marker = L.circleMarker(latlng, {radius: radiusSize, color: 'red'});
+         return marker;
+       }
+     }).addTo(mymap);
   });
 
   $.getJSON("Data/tri_2020_pierce.geojson",function(data){
