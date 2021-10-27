@@ -36,20 +36,30 @@ function mapping(){
        }).addTo(mymap);
   });
 
-  $.getJSON("Data/Schools.geojson",function(data){
+
+
+  $.getJSON("Data/Contaminated_Sites_(Ecology).geojson",function(data){
      L.geoJson(data, {
        pointToLayer: function(feature, latlng){
-         var marker = L.circle(latlng, {radius: 25, color: 'green'});
-         if (feature.properties.CITY === "TACOMA")
+         var riskColor,
+         risk = feature.properties.SiteRank;
+          if (feature.properties.SiteRank === "1 - Highest Assessed Risk") riskColor = 'red';
+          else if (feature.properties.SiteRank === "2 - Moderate-High Risk") riskColor = 'orangered';
+          else if (feature.properties.SiteRank === "3 - Moderate Risk") riskColor = 'orange';
+          else if (feature.properties.SiteRank === "4 - Low-Moderate Risk") riskColor = 'yelloworange';
+          else if (feature.properties.SiteRank === "5 - Lowest Assessed Risk") riskColor = 'yellow';
+          else riskColor = 'darkblue';
+         var marker = L.circle(latlng, {radius: 100, color: riskColor});
          return marker;
        }
      }).addTo(mymap);
   });
 
-  $.getJSON("Data/",function(data){
+  $.getJSON("Data/Schools.geojson",function(data){
      L.geoJson(data, {
        pointToLayer: function(feature, latlng){
-         var marker = L.circle(latlng, {radius: 100, color: 'red'});
+         var marker = L.circle(latlng, {radius: 25, color: 'green', fillColor: 'green', fillOpacity:1});
+         if (feature.properties.CITY === "TACOMA")
          return marker;
        }
      }).addTo(mymap);
