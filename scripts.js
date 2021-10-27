@@ -46,8 +46,8 @@ function mapping(){
           else if (feature.properties.SiteRank === "3 - Moderate Risk") riskColor = 'orange';
           else if (feature.properties.SiteRank === "4 - Low-Moderate Risk") riskColor = 'yelloworange';
           else if (feature.properties.SiteRank === "5 - Lowest Assessed Risk") riskColor = 'yellow';
-          else riskColor = 'darkblue';
-         var marker = L.circle(latlng, {radius: 100, color: riskColor});
+         var marker = L.circle(latlng, {radius: 200, color: riskColor});
+         if (feature.properties.SiteRank !== "")
          return marker;
        }
      }).addTo(mymap);
