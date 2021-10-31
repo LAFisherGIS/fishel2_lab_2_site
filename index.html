@@ -27,30 +27,80 @@
         <h2>Polluters, Pedagogy, and Place in Tacoma Washington</h2>
 				<h3>Toxic Exposure Possibilities for Students and General Citizens in the Port City</h3>
 		    <div class="pagecontent">
-          <h3>Schools and Polluters, A Story of Proximity and Neighborhood in Tacoma</h3>
-          <p></p>
+          <h3>Polluters, Pedagogy, and Place: Contaminated Schools and Council Districts in Tacoma</h3>
+          <p>From the ASARCO smelter of Ruston to the industries of the port, the Tacoma area is far from free of toxic traces of its past and present. These toxins, frequently waiting underground, are not all a constant and active danger, but the risk does exist in every case that under the right weather or disaster conditions people in the area could become exposed to these hidden hazards. As such, it is important to keep in mind the areas in which these toxins exist, for the sake of identifying the different risks faced by people in different parts of the city. In particular, the city council districts of Tacoma and the school grounds of educational institutions identified as Tacoman consitute a considerable area of interest for these toxic safety concerns.</p>
           <div id="map"></div>
           <div id="Informational">
-            <h3></h3>
-            <p></p>
+            <h3>About the Analysis</h3>
+            <p>For the purposes of identifying the risk faced by particular areas of the city and the schools within, a 200 meter buffer has been calculated from the location of each contaminated site, representing a perhaps conservative estimate of what areas someone who would be likely to be near the site in the event of toxic material coming up to the surface might be present. Where it overlaps with the grounds of a school, the students, faculty, staff, and if applicable PTA are considered to be at risk. Where it overlaps a city council district of Tacoma, the people which dwell or work in that district are considered to be at risk. Schools outside of the council districts of Tacoma have been included only when they are stated internally in the data in use to be part of Tacoma. Contaminated sites have been included regardless of their locations within Pierce County, so long as the level of risk they present has been evaluated and listed in the data, because even a toxic site outside of Tacoma proper can still threaten Tacomans.</p>
           </div>
           <div id="legend">
-            <h3></h3>
             <ul></ul>
+						<li>
+							<img src="MapboxIcons\pin-s-school+006400@2x.png" alt:"Pin type icon of a book and ruler, representing a school."/>
+							<text>Tacoma Area School</text>
+						</li>
+						<li>
+							<svg width="24" height="24">
+							<rect width="24" height="24" stroke="black" stroke-width="3" fill="gray" fill-opacity=".4"/>
+							</svg>
+							<text>Tacoma Area School Grounds</text>
+						</li>
             <li>
+							<svg width="24" height="24">
+							<rect width="24" height="24" stroke="purple" stroke-width="3" fill="purple" fill-opacity=".4"/>
+							</svg>
+							<text>Primary Area of Risk - Northeast Tacoma</text>
             </li>
             <li>
+							<svg width="24" height="24">
+							<rect width="24" height="24" stroke="gray" stroke-width="3" fill="gray" fill-opacity=".4"/>
+							</svg>
+							<text>Other Tacoma Council District</text>
             </li>
             <li>
+							<svg width="24" height="24">
+							<circle cx="12" cy="14" r="7" stroke="maroon" stroke-width="3" fill="maroon" fill-opacity=".4"/>
+							</svg>
+							<text>200 Meter Radius of Highest Risk Site</text>
             </li>
             <li>
+							<svg width="24" height="24">
+							<circle cx="12" cy="14" r="7" stroke="red" stroke-width="3" fill="red" fill-opacity=".4"/>
+							</svg>
+							<text>200 Meter Radius of High Risk Site</text>
             </li>
             <li>
+							<svg width="24" height="24">
+							<circle cx="12" cy="14" r="7" stroke="orangered" stroke-width="3" fill="orangered" fill-opacity=".4"/>
+							</svg>
+							<text>200 Meter Radius of Moderate-High Risk Site</text>
             </li>
+						<li>
+							<svg width="24" height="24">
+							<circle cx="12" cy="14" r="7" stroke="orange" stroke-width="3" fill="orange" fill-opacity=".4"/>
+							</svg>
+							<text>200 Meter Radius of Moderate Risk Site</text>
+						</li>
+						<li>
+							<svg width="24" height="24">
+							<circle cx="12" cy="14" r="7" stroke="goldenrod" stroke-width="3" fill="goldenrod" fill-opacity=".4"/>
+							</svg>
+							<text>200 Meter Radius of Low-Moderate Risk Site</text>
+						</li>
+						<li>
+							<svg width="24" height="24">
+							<circle cx="12" cy="14" r="7" stroke="yellow" stroke-width="3" fill="yellow" fill-opacity=".4"/>
+							</svg>
+							<text>200 Meter Radius of Low Risk Site</text>
+						</li>
           </div>
           <div id="references">
-            <h3></h3>
-            <p></p>
+            <h3>Data Utilized in This Map</h3>
+            <p><a href="https://gisdata-piercecowa.opendata.arcgis.com/datasets/schools/explore" target="_blank">School Points</a> courtesy of an anonymous user of Pierce County WA Open Geospatial Data Portal</p>
+						<p><a href="https://gisdata-piercecowa.opendata.arcgis.com/datasets/school-grounds/explore" target="_blank">School Ground Polygons</a> courtesy of an anonymous user of Pierce County WA Open Geospatial Data Portal</p>
+						<p><a href="https://geohub.cityoftacoma.org/datasets/neighborhood-council-districts-tacoma/explore?location=47.243852%2C-122.455044%2C12.43" target="_blank">Neighborhood Council Polygons</a> courtesy of an anonymous user of City of Tacoma GIS</p>
+						<p><a href="https://geohub.cityoftacoma.org/datasets/contaminated-sites-ecology/explore?location=47.242905%2C-122.455500%2C12.00" target="_blank">Contaminated Sites (Ecology) Points</a> courtesy of an anonymous user of City of Tacoma GIS</p>
           </div>
 		    </div>
 		</div>

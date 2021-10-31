@@ -47,6 +47,34 @@ Mode Selector Styling - This section defines the aesthetic qualities of the chec
   --textchroma: #FFFFFF;
 }
 
+div.leaflet-popup-content-wrapper {
+  background-color: var(--backgroundchroma);
+  color: var(--textchroma);
+}
+
+div.leaflet-popup-tip {
+  background-color: var(--backgroundchroma)
+}
+
+.leaflet-control-container .leaflet-top .leaflet-control-zoom a.leaflet-control-zoom-in {
+  background-color: var(--backgroundchroma);
+  color: var(--textchroma);
+}
+
+.leaflet-control-container .leaflet-top .leaflet-control-zoom a.leaflet-control-zoom-out {
+  background-color: var(--backgroundchroma);
+  color: var(--textchroma);
+}
+
+#legend {
+  background: var(--backgroundchroma)
+}
+
+#informational {
+  color: var(--textchroma);
+}
+
+
 /*
 Fixed Elements This section determines all characteristics of the page not altered by or involved in the lightmode/darkmode selection. All fixed elements of the website live here.
 */
@@ -101,27 +129,51 @@ h3{
 p{
   margin-left: 1em;
   margin-right: 1em;
-  font-size: 0.9em
+  font-size: 0.9em;
   font-weight: bold;
   text-align: left;
 }
 
+
+div#references{
+  background-color: red;
+  color: white;
+  padding: 1em;
+}
+
 a:link{
-  color: #FF4500;
+  color: gray;
 }
 
 a:visited{
-  color: #808080;
+  color: slategray;
 }
 
 a:hover{
-  color: #FF0000;
+  color: darkslategray;
 }
 
 a:active{
-  color: #8B0000;
+  color: black;
 }
 
 #map {
   height: 80vh;
+}
+
+img {
+  height: 3em;
+  margin-bottom: -1.5em;
+}
+
+#legend {
+  opacity: 0.7;
+  line-height: 0em;
+  border-radius: 0.5em;
+  padding: 1.5em;
+  padding-top: 0.125em;
+}
+
+li {
+  padding: 0.25em
 }

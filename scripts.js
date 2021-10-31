@@ -16,21 +16,29 @@ function modeSet(){
 // End Tero-based scripting
 
 function mapping(){
-  var mymap = L.map('map').setView([47.2528769, -122.4442906], 12);
+  var mymap = L.map('map', {
+    zoomControl : true,
+    maxBounds : [[47.33126776157878, -122.63860441671564], [47.09334144436703, -122.29401946898379]],
+    minZoom : 12
+  }).setView([47.2528769, -122.4442906], 12);
+
   var basemap = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/terrain/{z}/{x}/{y}{r}.png', {
-			attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+			attribution: 'School Icons &copy by <a href="https://www.mapbox.com/" target="_blank">Mapbox</a>, Map tiles by <a href="http://stamen.com" target="_blank">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0" target="_blank">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a> contributors',
 		}).addTo(mymap);
 
   $.getJSON("Data/Neighborhood_Council_Districts_(Tacoma).geojson",function(data){
      L.geoJson(data, {
-       style: {color:'grey'}
+       style: function(district){
+         if (district.properties.NAME === "NEW TACOMA") return {color:'purple'}
+         else return {color:'gray'}
+       }
        }).addTo(mymap);
   });
 
   $.getJSON("Data/School_Grounds.geojson",function(data){
      L.geoJson(data, {
-       style: function(feature){
-         if (feature.properties.CITY === "TACOMA") return {opacity:1, color:'black'}
+       style: function(grounds){
+         if (grounds.properties.CITY === "TACOMA") return {opacity:1, color:'black'}
          else return {opacity:0}
        }
        }).addTo(mymap);
@@ -71,5 +79,16 @@ function mapping(){
          return marker;
        }
      }).addTo(mymap);
+
+  var Legend =  new L.Control.Legend({
+		position: 'topleft',
+	});
+
+	mymap.addControl(Legend);
+	$(".legend-container").append( $("#legend") );
+
+  mymap.zoomControl.setPosition('topright');
+
+
   });
 }
