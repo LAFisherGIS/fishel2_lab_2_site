@@ -118,6 +118,7 @@ body{
   text-align: center;
 }
 
+/* This variable color must, necessarily, be located outside of the appropriate section to preserve its color*/
 .pagecontent h3{
   color: var(--textchroma);
 }
@@ -140,6 +141,7 @@ div#references{
   color: white;
   padding: 1em;
 }
+
 
 a:link{
   color: gray;
