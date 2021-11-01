@@ -17,6 +17,7 @@ function modeSet(){
 
 function mapping(){
   var mymap = L.map('map', {
+    // Thanks to Sebastian Nowak for guidance on how to move the zoom controls. See end of function for the remainder of the derived code. (Last Answer) https://stackoverflow.com/questions/22926512/customize-zoom-in-out-button-in-leaflet-js
     zoomControl : true,
     maxBounds : [[47.33126776157878, -122.63860441671564], [47.09334144436703, -122.29401946898379]],
     minZoom : 12
@@ -62,12 +63,14 @@ function mapping(){
           else if (feature.properties.SiteRank === "3 - Moderate Risk") riskColor = 'orange';
           else if (feature.properties.SiteRank === "4 - Low-Moderate Risk") riskColor = 'goldenrod';
           else if (feature.properties.SiteRank === "5 - Lowest Assessed Risk") riskColor = 'yellow';
-         var marker = L.circle(latlng, {radius: 200, color: riskColor});
-         if (feature.properties.SiteRank !== "")
-         return marker;
+        var marker = L.circle(latlng, {radius: 200, color: riskColor});
+          if (feature.properties.SiteRank !== "")
+          return marker;
        }
      }).addTo(mymap);
   });
+
+// Thanks to jseppi for their guide on how to use MakiMarkers https://github.com/jseppi/Leaflet.MakiMarkers/blob/master/index.html
 
   L.MakiMarkers.accessToken = "sk.eyJ1IjoibGFmaXNoZXJnaXMiLCJhIjoiY2t2OXJ4dnV1YTY2ZjJwbnpjM3BxbWRnYiJ9.CW4oaT94TkbelBF0Fj4rJw";
 
@@ -87,6 +90,8 @@ function mapping(){
        }
      }).addTo(mymap);
 
+// end of MakiMarkers
+
   var Legend =  new L.Control.Legend({
 		position: 'topleft',
 	});
@@ -94,8 +99,9 @@ function mapping(){
 	mymap.addControl(Legend);
 	$(".legend-container").append( $("#legend") );
 
-  mymap.zoomControl.setPosition('topright');
+// Thanks to Sebastian Nowak for guidance n moving the zoom controls. (Last answer) https://stackoverflow.com/questions/22926512/customize-zoom-in-out-button-in-leaflet-js
 
+  mymap.zoomControl.setPosition('topright');
 
   });
 }

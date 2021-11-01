@@ -47,6 +47,9 @@ Mode Selector Styling - This section defines the aesthetic qualities of the chec
   --textchroma: #FFFFFF;
 }
 
+/*Thanks to parsethis, Robert Kajic, Thriggle, and MySchizoBuddy for guidance on styling zoom controls https://stackoverflow.com/questions/12606141/how-would-i-customise-the-look-and-feel-of-the-leaflet-popup*/
+
+
 div.leaflet-popup-content-wrapper {
   background-color: var(--backgroundchroma);
   color: var(--textchroma);
@@ -55,6 +58,8 @@ div.leaflet-popup-content-wrapper {
 div.leaflet-popup-tip {
   background-color: var(--backgroundchroma)
 }
+
+/*Thanks to juanignaciosl for guidance on styling zoom controls https://stackoverflow.com/questions/22926512/customize-zoom-in-out-button-in-leaflet-js*/
 
 .leaflet-control-container .leaflet-top .leaflet-control-zoom a.leaflet-control-zoom-in {
   background-color: var(--backgroundchroma);
