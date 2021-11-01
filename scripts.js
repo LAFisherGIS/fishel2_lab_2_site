@@ -30,7 +30,14 @@ function mapping(){
      L.geoJson(data, {
        style: function(district){
          if (district.properties.NAME === "NEW TACOMA") return {color:'purple'}
-         else return {color:'gray'}
+         else if (district.properties.NAME === "SOUTH TACOMA") return {color:'rebeccapurple'}
+         else if (district.properties.NAME === "NORTH EAST") return {color:'rebeccapurple'}
+         else if (district.properties.NAME === "SOUTH END") return {color:'rebeccapurple'}
+         else if (district.properties.NAME === "EASTSIDE") return {color:'slateblue'}
+         else if (district.properties.NAME === "CENTRAL") return {color:'slateblue'}
+         else if (district.properties.NAME === "NORTH END") return {color:'slateblue'}
+         else if (district.properties.NAME === "WEST END") return {color:'plum'}
+         else return {color:'slategray'}
        }
        }).addTo(mymap);
   });

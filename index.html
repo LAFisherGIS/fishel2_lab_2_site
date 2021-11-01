@@ -32,7 +32,7 @@
           <div id="map"></div>
           <div id="Informational">
             <h3>About the Analysis</h3>
-            <p>For the purposes of identifying the risk faced by particular areas of the city and the schools within, a 200 meter buffer has been calculated from the location of each contaminated site, representing a perhaps conservative estimate of what areas someone who would be likely to be near the site in the event of toxic material coming up to the surface might be present. Where it overlaps with the grounds of a school, the students, faculty, staff, and if applicable PTA are considered to be at risk. Where it overlaps a city council district of Tacoma, the people which dwell or work in that district are considered to be at risk. Schools outside of the council districts of Tacoma have been included only when they are stated internally in the data in use to be part of Tacoma. Contaminated sites have been included regardless of their locations within Pierce County, so long as the level of risk they present has been evaluated and listed in the data, because even a toxic site outside of Tacoma proper can still threaten Tacomans. The points representing schools are clickable and will yield information on the name, street address, and type (IE, elementary, middle, high, private, technical, university) of the school in question.</p>
+            <p>For the purposes of identifying the risk faced by particular areas of the city and the schools within, a 200 meter buffer has been calculated from the location of each contaminated site, representing a perhaps conservative estimate of the area in which someone out on normal day to day business might pass close enough to the site to be exposed to toxins in the event that the toxins are released into the streets. Where it overlaps with the grounds of a school, the students, faculty, staff, and if applicable PTA are considered to be at risk. Schools outside of the council districts of Tacoma have been included only when they are stated internally in the data in use to be part of Tacoma. In recognition of the fact that regulars of facilities other than schools are in no less risk than those present in schools, the city council districts of Tacoma have likewise been classified on the basis of the portion of their landmass which falls within these areas. Contaminated sites have been included regardless of their locations within Pierce County, so long as the level of risk they present has been evaluated and listed in the data, because even a toxic site outside of Tacoma proper can still threaten Tacomans. The points representing schools are clickable and will yield information on the name, street address, and type (IE, elementary, middle, high, private, technical, university) of the school in question.</p>
           </div>
           <div id="legend">
             <ul></ul>
@@ -42,55 +42,72 @@
 						</li>
 						<li>
 							<svg width="24" height="24">
-							<rect width="24" height="24" stroke="black" stroke-width="3" fill="gray" fill-opacity=".4"/>
+								<rect width="24" height="24" stroke="white" stroke-width="1" fill="white" fill-opacity=".4"/>
+								<rect width="22" height="22" stroke="black" stroke-width="1" fill="gray" fill-opacity=".4"/>
 							</svg>
 							<text>Tacoma Area School Grounds</text>
 						</li>
             <li>
 							<svg width="24" height="24">
-							<rect width="24" height="24" stroke="purple" stroke-width="3" fill="purple" fill-opacity=".4"/>
+								<rect width="24" height="24" stroke="white" stroke-width="1" fill="white" fill-opacity=".4"/>
+								<rect width="22" height="22" stroke="purple" stroke-width="1" fill="purple" fill-opacity=".4"/>
 							</svg>
-							<text>Primary Area of Risk - Northeast Tacoma</text>
+							<text>Area of Greatest Risk - New Tacoma</text>
+            </li>
+						<li>
+							<svg width="24" height="24">
+								<rect width="24" height="24" stroke="white" stroke-width="1" fill="white" fill-opacity=".4"/>
+								<rect width="22" height="22" stroke="rebeccapurple" stroke-width="1" fill="rebeccapurple" fill-opacity=".4"/>
+							</svg>
+							<text>Areas of Major Risk - South Tacoma, Northeast Tacoma, South End</text>
+						</li>
+						<li>
+							<svg width="24" height="24">
+								<rect width="24" height="24" stroke="white" stroke-width="1" fill="white" fill-opacity=".4"/>
+								<rect width="22" height="22" stroke="slateblue" stroke-width="1" fill="slateblue" fill-opacity=".4"/>
+							</svg>
+							<text>Areas of Minor Risk - Eastside, Central, North End</text>
+						</li>
+            <li>
+							<svg width="24" height="24">
+								<rect width="24" height="24" stroke="white" stroke-width="1" fill="white" fill-opacity=".4"/>
+								<rect width="22" height="22" stroke="plum" stroke-width="1" fill="plum" fill-opacity=".4"/>
+							</svg>
+							<text>Area of Least Risk - West End</text>
             </li>
             <li>
 							<svg width="24" height="24">
-							<rect width="24" height="24" stroke="gray" stroke-width="3" fill="gray" fill-opacity=".4"/>
-							</svg>
-							<text>Other Tacoma Council District</text>
-            </li>
-            <li>
-							<svg width="24" height="24">
-							<circle cx="12" cy="14" r="7" stroke="maroon" stroke-width="3" fill="maroon" fill-opacity=".4"/>
+								<circle cx="12" cy="14" r="7" stroke="maroon" stroke-width="3" fill="maroon" fill-opacity=".4"/>
 							</svg>
 							<text>200 Meter Radius of Highest Risk Site</text>
             </li>
             <li>
 							<svg width="24" height="24">
-							<circle cx="12" cy="14" r="7" stroke="red" stroke-width="3" fill="red" fill-opacity=".4"/>
+								<circle cx="12" cy="14" r="7" stroke="red" stroke-width="3" fill="red" fill-opacity=".4"/>
 							</svg>
 							<text>200 Meter Radius of High Risk Site</text>
             </li>
             <li>
 							<svg width="24" height="24">
-							<circle cx="12" cy="14" r="7" stroke="orangered" stroke-width="3" fill="orangered" fill-opacity=".4"/>
+								<circle cx="12" cy="14" r="7" stroke="orangered" stroke-width="3" fill="orangered" fill-opacity=".4"/>
 							</svg>
 							<text>200 Meter Radius of Moderate-High Risk Site</text>
             </li>
 						<li>
 							<svg width="24" height="24">
-							<circle cx="12" cy="14" r="7" stroke="orange" stroke-width="3" fill="orange" fill-opacity=".4"/>
+								<circle cx="12" cy="14" r="7" stroke="orange" stroke-width="3" fill="orange" fill-opacity=".4"/>
 							</svg>
 							<text>200 Meter Radius of Moderate Risk Site</text>
 						</li>
 						<li>
 							<svg width="24" height="24">
-							<circle cx="12" cy="14" r="7" stroke="goldenrod" stroke-width="3" fill="goldenrod" fill-opacity=".4"/>
+								<circle cx="12" cy="14" r="7" stroke="goldenrod" stroke-width="3" fill="goldenrod" fill-opacity=".4"/>
 							</svg>
 							<text>200 Meter Radius of Low-Moderate Risk Site</text>
 						</li>
 						<li>
 							<svg width="24" height="24">
-							<circle cx="12" cy="14" r="7" stroke="yellow" stroke-width="3" fill="yellow" fill-opacity=".4"/>
+								<circle cx="12" cy="14" r="7" stroke="yellow" stroke-width="3" fill="yellow" fill-opacity=".4"/>
 							</svg>
 							<text>200 Meter Radius of Low Risk Site</text>
 						</li>
