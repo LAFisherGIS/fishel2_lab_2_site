@@ -99,6 +99,13 @@ function mapping(){
 	mymap.addControl(Legend);
 	$(".legend-container").append( $("#legend") );
 
+  var osmUrl='http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
+	var osmAttrib='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+
+  var osmGeocoder = new L.Control.OSMGeocoder({placeholder: 'Search location...'});
+
+	map.addControl(osmGeocoder);
+
 // Thanks to Sebastian Nowak for guidance n moving the zoom controls. (Last answer) https://stackoverflow.com/questions/22926512/customize-zoom-in-out-button-in-leaflet-js
 
   mymap.zoomControl.setPosition('topright');
