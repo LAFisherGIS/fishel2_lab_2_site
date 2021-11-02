@@ -99,6 +99,17 @@ function mapping(){
 	mymap.addControl(Legend);
 	$(".legend-container").append( $("#legend") );
 
+// Thanks to Smeijer for guidance on how to insert a geosearch control https://smeijer.github.io/leaflet-geosearch/#using-a-cdn.
+
+const provider = new GeoSearch.OpenStreetMapProvider();
+
+const search = new GeoSearch.GeoSearchControl({
+  style: 'button',
+  provider: provider,
+});
+
+mymap.addControl(search);
+
 // Thanks to Sebastian Nowak for guidance n moving the zoom controls. (Last answer) https://stackoverflow.com/questions/22926512/customize-zoom-in-out-button-in-leaflet-js
 
   mymap.zoomControl.setPosition('topright');

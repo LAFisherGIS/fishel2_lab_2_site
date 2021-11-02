@@ -66,7 +66,22 @@ div.leaflet-popup-tip {
   color: var(--textchroma);
 }
 
-.leaflet-control-container .leaflet-top .leaflet-control-zoom a.leaflet-control-zoom-out {
+.leaflet-control-container.leaflet-top.leaflet-control-zoom a.leaflet-control-zoom-out {
+  background-color: var(--backgroundchroma);
+  color: var(--textchroma);
+}
+
+form.open {
+  background-color: var(--backgroundchroma);
+  color: var(--textchroma);
+}
+
+input.glass {
+  background-color: var(--backgroundchroma);
+  color: var(--textchroma);
+}
+
+div.results.active {
   background-color: var(--backgroundchroma);
   color: var(--textchroma);
 }
@@ -163,6 +178,17 @@ a:hover{
 a:active{
   color: black;
 }
+
+a.leaflet-bar-part.leaflet-bar-part-single{
+  background-color: var(--backgroundchroma);
+  color: var(--textchroma);
+}
+
+a.reset {
+  background-color: var(--backgroundchroma);
+  color: var(--textchroma);
+}
+
 
 #map {
   height: 80vh;
