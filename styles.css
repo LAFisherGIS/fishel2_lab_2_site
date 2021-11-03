@@ -47,7 +47,7 @@ Mode Selector Styling - This section defines the aesthetic qualities of the chec
   --textchroma: #FFFFFF;
 }
 
-/*Thanks to parsethis, Robert Kajic, Thriggle, and MySchizoBuddy for guidance on styling zoom controls https://stackoverflow.com/questions/12606141/how-would-i-customise-the-look-and-feel-of-the-leaflet-popup*/
+/*Thanks to parsethis, Robert Kajic, Thriggle, and MySchizoBuddy for guidance on styling popups https://stackoverflow.com/questions/12606141/how-would-i-customise-the-look-and-feel-of-the-leaflet-popup*/
 
 
 div.leaflet-popup-content-wrapper {
